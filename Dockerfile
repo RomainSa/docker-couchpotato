@@ -1,11 +1,11 @@
-FROM lsiobase/alpine.python
-MAINTAINER sparklyballs
+FROM hypriot/rpi-python
 
 # set python to use utf-8 rather than ascii.
 ENV PYTHONIOENCODING="UTF-8"
 
 # add local files
-COPY root/ /
+COPY root/ /i
+COPY CouchPotatoServer/ /app/couchpotato/
 
 # ports and volumes
 EXPOSE 5050
